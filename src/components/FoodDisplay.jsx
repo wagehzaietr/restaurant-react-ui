@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FoodCard } from "../Styles/Styles";
 
-const FoodDisplay = ({ item, index, foodItems }) => {
+const FoodDisplay = ({ item, index, foodItems,setFoodItems }) => {
   const { title, info, price, category, image } = item;
+
 
   return (
     <>

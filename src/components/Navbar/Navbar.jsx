@@ -16,7 +16,7 @@ const Navbar = () => {
               <a href="#food">menu</a>
             </li>
           </ul>
-          <button>Order </button>
+          <button className="btn">Order </button>
         </NavContainer>
       </Nav>
     </>

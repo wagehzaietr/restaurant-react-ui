@@ -2,9 +2,6 @@ import styled, { keyframes } from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  width: 90%;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -12,10 +9,13 @@ const Container = styled.div`
   flex-direction: column;
 
   h2 {
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 2.5rem;
     position: relative;
-    font-weight: 400;
+    font-weight: 500;
+    background: linear-gradient(45deg,#fc7e09,#262220a2 70%);
+    -webkit-background-clip: text;
+    color: transparent;
 
     &::before {
       content: "";
@@ -95,25 +95,38 @@ const Content = styled.div`
   }
 `;
 
+
 const CategoryBtn = styled.div`
-  select{
-    border: none;
-    background: orange;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 5px;
-    letter-spacing: 2;
-    box-shadow: 0 0 10px #69686886;
-    transition: 0.4s ease-in-out;
-    text-transform: capitalize;
-    display: inline-block;
-    outline: none;
-    color: #373737;
-  }
 
-@media only screen and (max-width: 768px) {
+.btn {
+ background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%)
+}
 
-    }
+.btn {
+ margin: 10px;
+ padding: 7px 10px;
+ text-align: center;
+ text-transform: uppercase;
+ transition: 0.5s;
+ background-size: 200% auto;
+ color: white;
+ border-radius: 10px;
+ border: 0px;
+ font-weight: 400;
+ box-shadow: 0px 0px 14px -7px #f09819;
+ font-size: .9rem;
+}
+
+.btn:hover {
+ background-position: right center;
+ /* change the direction of the change here */
+ color: #fff;
+ text-decoration: none;
+}
+
+.btn:active {
+ transform: scale(0.95);
+}
 
 `;
 // button {

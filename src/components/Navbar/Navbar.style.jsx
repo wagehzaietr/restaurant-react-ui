@@ -26,19 +26,50 @@ const NavContainer = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
+  
+  .btn {
+ background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%)
+}
+
+.btn {
+ margin: 10px;
+ padding: 10px 15px;
+ text-align: center;
+ text-transform: uppercase;
+ transition: 0.5s;
+ background-size: 200% auto;
+ color: white;
+ border-radius: 10px;
+ display: block;
+ border: 0px;
+ font-weight: 500;
+ cursor: pointer;
+ font-size: .9rem;
+ box-shadow: 0px 0px 14px -7px #f09819;
+
+ @media only screen and (max-width: 768px) {
+      padding: 7px 6px;
+      font-size: 0.8rem;
+      width: 20%;
+      transform: scale(1);
+
+    }
+}
+
+.btn:hover {
+ background-position: right center;
+ /* change the direction of the change here */
+ color: #fff;
+ text-decoration: none;
+}
+
+.btn:active {
+ transform: scale(0.95);
+}
 
   button {
-    border: none;
-    background-color: orange;
-    padding: 0.45rem 1rem;
-    border-radius: 0.5rem;
-    color: #2e2821;
-    transition: 0.2s ease-in-out;
+   
 
     @media only screen and (max-width: 768px) {
       padding: 0.35rem 1rem;
@@ -67,17 +98,20 @@ const NavContainer = styled.div`
 
     a {
       text-decoration: none;
-      color: orange;
+      color: transparent;
       text-transform: capitalize;
     }
   }
   li {
     list-style: none;
-    color: orange;
-    font-size: 1.5rem;
+    background: linear-gradient(45deg,#fc7e09,#ffffffc5 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 500;
+    font-size: 1.4rem;
     transition: 0.1s;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
     border-bottom: 2px solid orange;
 
     @media only screen and (max-width: 768px) {

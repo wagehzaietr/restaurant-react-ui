@@ -1,18 +1,17 @@
 import React from "react";
 import { CategoryBtn } from "../Styles/Styles";
-
 const Categories = ({ filterItem, allCategory }) => {
   return (
     <CategoryBtn>
-      <select onChange={(e) => filterItem(e.target.value)}>
+      <div>
         {allCategory.map((item) => {
           return (
-            <option>
+            <button className="btn" onClick={() => filterItem(item)} key={item}>
               {item}
-            </option>
+            </button>
           );
         })}
-      </select>
+      </div>
     </CategoryBtn>
   );
 };

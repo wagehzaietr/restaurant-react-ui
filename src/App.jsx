@@ -1,12 +1,8 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import "./App.css";
-import axios from "axios";
-import Loader from "./components/Loader";
 import { Container, Left, Right, } from "./Styles/Styles";
-import { AiOutlinePlus } from "react-icons/ai";
-import { FaMinus } from "react-icons/fa";
 import FoodItems from './components/FoodItems'
 import Categories from "./components/Categories";
 import {foodItems} from './Data'
@@ -38,7 +34,7 @@ const filterItem = (category)=>{
       <Main/>
       <h2>Our Menu</h2>
       <Categories {...foodItems} foodItems={foodItems} filterItem={filterItem} allCategory={allCategory} />
-      <FoodItems foodItems={foodItems} fooditem={fooditem} />
+      <FoodItems foodItems={foodItems} fooditem={fooditem} setFooditem={setFooditem} />
     </Container>
   );
 };
